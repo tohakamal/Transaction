@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:background="@color/colorHolo_Blue_Bright"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_transaction"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_transaction_center_white_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:focusable="true"
+        android:hint="Enter Date"
+        android:inputType="date"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_transaction" />
+
+    <EditText
+        android:id="@+id/et_particulars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorWhite"
+        android:hint="Enter particulars"
+        android:inputType="text"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_date" />
+
+    <EditText
+        android:id="@+id/et_income"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorWhite"
+        android:hint="Enter Income"
+        android:inputType="number"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_particulars" />
+
+    <EditText
+        android:id="@+id/et_expends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorWhite"
+        android:hint="Enter Expends"
+        android:inputType="number"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_income" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".2" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Add"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/et_expends" />
+
+    <Button
+        android:id="@+id/btn_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="View"
+        app:layout_constraintStart_toEndOf="@id/btn_add"
+        app:layout_constraintTop_toBottomOf="@id/et_expends" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
